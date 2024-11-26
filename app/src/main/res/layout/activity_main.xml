@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labLabel"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enterNumberInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/enterNumber"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/labLabel"
+        app:layout_constraintStart_toStartOf="@+id/labLabel"
+        app:layout_constraintTop_toBottomOf="@id/labLabel" />
+
+    <EditText
+        android:id="@+id/numberInput"
+        android:layout_width="212dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/enterNumberInfo"
+        app:layout_constraintStart_toStartOf="@+id/enterNumberInfo"
+        app:layout_constraintTop_toBottomOf="@+id/enterNumberInfo" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="204dp"
+        android:layout_height="55dp"
+        android:onClick="onClick"
+        android:text="@string/play"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/numberInput"
+        app:layout_constraintStart_toStartOf="@+id/numberInput"
+        app:layout_constraintTop_toBottomOf="@+id/numberInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

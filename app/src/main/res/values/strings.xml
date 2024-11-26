@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RandomizerGame</string>
+    <string name="enterNumberInfo">Введіть число від 0 до 100</string>
+    <string name="labLabel">Лабораторна робота №1</string>
+    <string name="enterNumber">Введіть число</string>
+    <string name="play">Грати!</string>
+</resources>
