@@ -11,8 +11,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    var guess = 0
-    var isGuessed = false
+    private var guess = 0
+    private var isGuessed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,18 +34,21 @@ class MainActivity : AppCompatActivity() {
         if (!isGuessed) {
             val inputNumber = if (textToNumber == "") null else Integer.parseInt(textToNumber)
             if (inputNumber == null) {
-                textViewInfo.setText("Ви не ввели число!")
+                textViewInfo.text = "Ви не ввели число!"
             }
             else if (inputNumber > guess) {
-                textViewInfo.setText("Число має бути менше.")
+                textViewInfo.text = "Число має бути менше."
             }
             else if (inputNumber < guess) {
-                textViewInfo.setText("Число має бути більше.")
+                textViewInfo.text = "Число має бути більше."
             }
             else if (inputNumber == guess) {
-                textViewInfo.setText("Ви вгадали!")
-                buttonControl.setText("Грати знову")
+                textViewInfo.text = "Ви вгадали!"
+                buttonControl.text = "Грати знову"
                 isGuessed = true
+            }
+            else {
+                textViewInfo.text = "Щось пішло не так!"
             }
         }
         else {
